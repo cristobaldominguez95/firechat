@@ -17,11 +17,12 @@ export class ChatService {
     return this.itemsCollection.valueChanges();
   }
 
-  addMessage(message: string) {
+  addMessage(message: string, user: any) {
     let newMessage: IMessage = {
-      name: 'Cristóbal',
+      name: user.name,
       message: message,
-      date: new Date().getTime()
+      date: new Date().getTime(),
+      uid: user.uid
     };
     return this.itemsCollection.add(newMessage);
   }

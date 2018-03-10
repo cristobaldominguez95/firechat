@@ -1,5 +1,4 @@
-<h1>Chat</h1>
-<hr>
+<button class="btn btn-outline-danger" (click)="logout()">Logout</button>
 <div id="app-messages" class="app-messages">
   <div class="text-right" *ngFor="let message of messages">
     <span class="badge badge-primary">{{ message.name }}</span>
