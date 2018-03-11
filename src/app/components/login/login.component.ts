@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit {
   login(platform: string) {
     if (platform === 'google') {
       this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    } else if (platform === 'twitter') {
+      this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
     }
   }
 
